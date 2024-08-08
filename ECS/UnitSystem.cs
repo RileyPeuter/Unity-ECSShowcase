@@ -2,10 +2,10 @@ public partial struct UnitSystem : ISystem
 {
     public void OnUpdate(ref SystemState state)
     {
-        UnitMoveAI unitAIJob = new UnitMoveAI { deltaTime = SystemAPI.Time.DeltaTime };
-        unitAIJob.Schedule();
+        UnitMoveJob moveJob = new UnitMoveJob { deltaTime = SystemAPI.Time.DeltaTime };
+        moveJob.Schedule();
 
-        UnitActionAI unitActionAIJob = new UnitActionAI();
-        unitActionAIJob.Schedule();
+        UnitActionJob unitActionJob = new UnitActionJob();
+        UnitActionJob.Schedule();
     }
 }
