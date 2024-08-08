@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using Unity.Entities;
 using UnityEngine;
-using Unity.Transforms;
 using Unity.Burst;
 using Unity.Jobs;
-using Unity.VisualScripting;
-using Unity.Mathematics;
 
+[BurstCompile]
 public partial struct UnitActionJob : IJobEntity
 {
     private void Execute(ref Unit unit)
