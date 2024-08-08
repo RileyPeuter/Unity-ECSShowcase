@@ -43,8 +43,7 @@ public class Objective
     //###Utilities###
     public bool checkObjective(BattleEventType nBattleEventType, string nSubject = null, string nVerb = null, string nTarget = null, string nResult = null)
     {
-
-        //This block just checks if the event checks if something is equal to the objecitve
+        //This block just checks if the event checks if  an event matches an objective
         if(objectiveType != nBattleEventType){return false;}
         if(subject != null && subject != nSubject){return false;}
         if(verb != null && verb != nVerb){return false;}
@@ -55,10 +54,15 @@ public class Objective
         {
             return true;
         }
-             
         return true;
     }
 
+    //Added this to make it cleaner elsewhere
+    public bool checkObjective(BattleEvent nBattleEvent)
+    {
+        return checkObjective(nBattleEvent.eventType, nBattleEvent.subject, nBattleEvent.verb, nBattleEvent.target, nBattleEvent.result);
+    }
+    
     //Adds more logic to objectives like "Deal MORE than 6 damage"
     public bool testModifier(ObjectiveModifier objectiveModifier, string result, int threshHold)
     {
