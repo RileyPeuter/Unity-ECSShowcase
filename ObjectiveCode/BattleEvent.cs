@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BattleEvent
 {
+    //TODO: I really should change these to actual object references instead of just Strings. 
+    //I'll probably need to use some form of class heirarchy or interface. 
     //###MemberVariables###
     public BattleEventType eventType;
     public string subject = null;
