@@ -1,4 +1,9 @@
 public enum BattleEventType
 {
-    Attack, Hit, Kill, Occupy, Interact, Time
+    Attack,
+    Hit,
+    Kill,
+    Occupy,
+    Interact,
+    Time
 }
