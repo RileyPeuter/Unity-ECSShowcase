@@ -1,3 +1,9 @@
+using UnityEngine;
+using Unity.Transforms;
+using Unity.Burst;
+using Unity.Jobs;
+using Unity.Entities;
+
 public class UnitAuthor : MonoBehaviour
 {}
 
